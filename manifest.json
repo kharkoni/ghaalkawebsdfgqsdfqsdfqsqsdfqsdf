@@ -1,0 +1,24 @@
+{
+  "name": "Frituur Magic Admin",
+  "short_name": "Magic Admin",
+  "description": "Beheerpaneel voor Frituur Magic bestellingen.",
+  "start_url": "admin.html",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#FBD10D",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "indexfiles/friethuis-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "indexfiles/friethuis-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

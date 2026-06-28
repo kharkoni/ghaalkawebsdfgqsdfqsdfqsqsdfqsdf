@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Frituur Magic</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="indexfiles/style-admin.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FBD10D">
+</head>
+<body>
+
+    <!-- 1. LOGIN CONTAINER -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-card">
+            <h1 class="login-logo">FRITUUR <span>Magic</span></h1>
+            <div class="login-subtitle">Admin Login</div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="login-group">
+                    <label for="username" class="login-label">Gebruikersnaam</label>
+                    <input type="text" id="username" class="login-input" placeholder="Voer gebruikersnaam in" required autocomplete="username">
+                </div>
+                
+                <div class="login-group">
+                    <label for="password" class="login-label">Wachtwoord</label>
+                    <input type="password" id="password" class="login-input" placeholder="Voer wachtwoord in" required autocomplete="current-password">
+                </div>
+                
+                <div class="login-error" id="loginError">Onjuiste inloggegevens. Probeer opnieuw.</div>
+                
+                <button type="submit" class="login-btn">Inloggen</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 2. DASHBOARD CONTAINER -->
+    <div class="dashboard-container" id="dashboardContainer">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <div class="dashboard-title-area">
+                <h1 class="dashboard-logo">FRITUUR <span>Magic</span></h1>
+                <span class="dashboard-badge">BEHEER</span>
+            </div>
+            <button class="logout-btn" id="logoutBtn">Uitloggen</button>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard-content">
+            <!-- Stats overview cards -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <span class="stat-label">Nieuwe bestellingen</span>
+                        <span class="stat-value highlight" id="statsPending">0</span>
+                    </div>
+                    <div class="stat-icon">📥</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <span class="stat-label">Afgehaald vandaag</span>
+                        <span class="stat-value" id="statsCompleted">0</span>
+                    </div>
+                    <div class="stat-icon">✅</div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-info">
+                        <span class="stat-label">Totale omzet (Afgehaald)</span>
+                        <span class="stat-value" id="statsRevenue">€ 0,00</span>
+                    </div>
+                    <div class="stat-icon">💰</div>
+                </div>
+            </section>
+
+            <!-- Orders grid area -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title" id="ordersSectionTitle">Inkomende Bestellingen</h2>
+                    
+                    <div class="dashboard-toggle-group">
+                        <button class="toggle-btn active" id="togglePending">Actief</button>
+                        <button class="toggle-btn" id="toggleCompleted">Afgehaald</button>
+                    </div>
+                </div>
+                
+                <div class="orders-grid" id="ordersGrid">
+                    <!-- Cards will be populated dynamically -->
+                    <div class="no-orders-message">Laden van bestellingen...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Firebase compatibility SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <!-- Admin Logic -->
+    <script src="indexfiles/admin.js" defer></script>
+
+    <!-- Register Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registered successfully.', reg))
+                    .catch(err => console.warn('Service Worker registration failed.', err));
+            });
+        }
+    </script>
+</body>
+</html>

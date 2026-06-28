@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Openingstijden - Frituur Magic</title>
+    <meta name="description" content="Kom langs bij Frituur Magic op de Frans van Dunlaan in Antwerpen. Bekijk onze openingstijden, neem contact met ons op of stuur een bericht.">
+    <meta name="keywords" content="frituur contact, openingstijden frituur, Frans van Dunlaan Antwerpen, telefoonnummer frituur, bericht sturen">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="contact.html">
+    <meta property="og:title" content="Contact & Openingstijden - Frituur Magic">
+    <meta property="og:description" content="Kom langs bij Frituur Magic op de Frans van Dunlaan in Antwerpen. Bekijk onze openingstijden, neem contact met ons op of stuur een bericht.">
+    <meta property="og:image" content="indexfiles/ban.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="contact.html">
+    <meta property="twitter:title" content="Contact & Openingstijden - Frituur Magic">
+    <meta property="twitter:description" content="Kom langs bij Frituur Magic op de Frans van Dunlaan in Antwerpen. Bekijk onze openingstijden, neem contact met ons op of stuur een bericht.">
+    <meta property="twitter:image" content="indexfiles/ban.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Preload crucial style sheets -->
+    <link rel="preload" href="indexfiles/style-v2.css" as="style">
+    <link rel="preload" href="indexfiles/style-contact.css" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="indexfiles/style-v2.css">
+    <link rel="stylesheet" href="indexfiles/style-contact.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Anton&family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text" aria-label="Frituur Magic">
+                    FRITUUR <span>Magic</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="menu.html" class="btn-commander-header">
+                    BESTELLEN
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu zijbalk -->
+    <div class="menu-sidebar" id="menuSidebar">
+        <div class="menu-sidebar-overlay" id="menuOverlay"></div>
+        <div class="menu-sidebar-content">
+            <button class="menu-close" id="menuClose">×</button>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-link">HOME</a>
+                <a href="menu.html" class="sidebar-link">MENU</a>
+                <a href="chef.html" class="sidebar-link">CHEF</a>
+                <a href="contact.html" class="sidebar-link">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Contact main section -->
+    <div class="contact-page-wrapper">
+        <section class="contact-section">
+            <div class="contact-container">
+                
+                <div class="contact-header">
+                    <p class="contact-subtitle-cursive">Kom gezellig langs</p>
+                    <h1 class="contact-title-mega">CONTACT</h1>
+                </div>
+
+                <div class="contact-grid">
+                    
+                    <!-- Left Column: Details & Opening Hours -->
+                    <div class="contact-details-col">
+                        
+                        <!-- Contact Info Card -->
+                        <div class="contact-info-card">
+                            <h2 class="contact-card-title">Gegevens</h2>
+                            <div class="info-rows">
+                                <div class="info-row">
+                                    <div class="info-icon-box">📍</div>
+                                    <div class="info-text-box">
+                                        <span class="info-label">Adres</span>
+                                        <a href="https://maps.google.com/?q=Frans+van+Dunlaan,+2610+Antwerpen" target="_blank" class="info-value">Frans van Dunlaan, 2610 Antwerpen</a>
+                                    </div>
+                                </div>
+                                <div class="info-row">
+                                    <div class="info-icon-box">📞</div>
+                                    <div class="info-text-box">
+                                        <span class="info-label">Telefoon</span>
+                                        <a href="tel:032978823" class="info-value">03 297 88 23</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Opening Hours Card -->
+                        <div class="contact-info-card">
+                            <h2 class="contact-card-title">Openingstijden</h2>
+                            <div class="hours-table">
+                                <div class="hours-row" id="hours-monday">
+                                    <span class="day-name">Maandag</span>
+                                    <span class="day-time">16:30 - 22:30</span>
+                                </div>
+                                <div class="hours-row" id="hours-tuesday">
+                                    <span class="day-name">Dinsdag</span>
+                                    <span class="day-time">11:30 - 23:00</span>
+                                </div>
+                                <div class="hours-row" id="hours-wednesday">
+                                    <span class="day-name">Woensdag</span>
+                                    <span class="day-time">11:30 - 23:00</span>
+                                </div>
+                                <div class="hours-row" id="hours-thursday">
+                                    <span class="day-name">Donderdag</span>
+                                    <span class="day-time">11:30 - 23:00</span>
+                                </div>
+                                <div class="hours-row" id="hours-friday">
+                                    <span class="day-name">Vrijdag</span>
+                                    <span class="day-time">11:30 - 23:00</span>
+                                </div>
+                                <div class="hours-row" id="hours-saturday">
+                                    <span class="day-name">Zaterdag</span>
+                                    <span class="day-time">11:30 - 23:00</span>
+                                </div>
+                                <div class="hours-row" id="hours-sunday">
+                                    <span class="day-name">Zondag</span>
+                                    <span class="day-time">11:30 - 23:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Google Rating Card -->
+                        <div class="google-review-card">
+                            <div class="google-badge-logo">
+                                <!-- Simulated Google G icon using SVG -->
+                                <svg class="google-icon-svg" viewBox="0 0 24 24">
+                                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22c-.87-2.6-2.6-4.53 0-6.63z"/>
+                                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                                </svg>
+                                <div class="google-logo-text">
+                                    <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+                                </div>
+                            </div>
+                            <div class="google-rating-info">
+                                <div class="google-stars-row">
+                                    <span class="google-rating-num">4.7</span>
+                                    <div class="google-stars">★★★★★</div>
+                                </div>
+                                <div class="google-reviews-count">
+                                    Geverifieerde Google-beoordelingen (<strong>342 reviews</strong>)
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Map & Form -->
+                    <div class="contact-interactive-col">
+                        
+                        <!-- Google Maps Embed -->
+                        <div class="map-container">
+                            <iframe 
+                                class="map-iframe"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.8272559582236!2d4.417240315809315!3d51.171873379581456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f7076d54cfeb%3A0xe5a363db8e056d68!2sFrans%20van%20Dunlaan%2C%202610%20Antwerpen%2C%20Belgium!5e0!3m2!1snl!2sbe!4v1700000000000!5m2!1snl!2sbe" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Locatie Frituur Magic">
+                            </iframe>
+                        </div>
+
+                        <!-- Contact Form Card -->
+                        <div class="contact-form-card">
+                            <h2 class="contact-card-title">Stuur een bericht</h2>
+                            <form class="contact-form">
+                                <div class="form-group-row">
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Naam</label>
+                                        <input type="text" id="name" class="form-input" placeholder="Uw naam" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" id="email" class="form-input" placeholder="Uw emailadres" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Onderwerp</label>
+                                    <input type="text" id="subject" class="form-input" placeholder="Onderwerp van uw bericht" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Bericht</label>
+                                    <textarea id="message" class="form-input" placeholder="Schrijf hier uw bericht..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit-form">VERZENDEN</button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Geanimeerde golven -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="wave-parallax">
+                    <use href="#wave" x="48" y="0" fill="rgba(251, 209, 13, 0.3)" />
+                    <use href="#wave" x="48" y="3" fill="rgba(251, 209, 13, 0.5)" />
+                    <use href="#wave" x="48" y="5" fill="rgba(251, 209, 13, 0.7)" />
+                    <use href="#wave" x="48" y="7" fill="#FBD10D" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Logo -->
+                    <div class="footer-column footer-logo-col">
+                        <div class="footer-brand">FRITUUR <span>Magic</span></div>
+                    </div>
+
+                    <!-- Pagina's -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">PAGINA'S</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#accueil">Home</a></li>
+                            <li><a href="menu.html">Ons Menu</a></li>
+                            <li><a href="chef.html">Onze Chef</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Openingstijden -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">OPENINGSTIJDEN</h3>
+                        <ul class="footer-links">
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Di - Zo: 11:30 - 23:00</li>
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Maandag: 16:30 - 22:30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Floating Checkout Button -->
+    <a href="menu.html" class="floating-checkout" id="floatingCheckout" aria-label="Open bestelopties">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkout-icon">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="checkout-text">Bestellen</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="indexfiles/script.js" defer></script>
+    
+    <!-- Script to highlight current day in opening hours -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const daysOfWeek = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const currentDay = daysOfWeek[new Date().getDay()];
+            const todayRow = document.getElementById('hours-' + currentDay);
+            if (todayRow) {
+                todayRow.classList.add('today');
+                // Optional: Append a small text indicating it's today
+                const dayTime = todayRow.querySelector('.day-time');
+                if (dayTime) {
+                    dayTime.innerHTML += ' <span style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.9;">(Vandaag)</span>';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

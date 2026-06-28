@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onze Chef - Frituur Magic</title>
+    <meta name="description" content="Ontmoet de chef van Frituur Magic. Met jarenlange ervaring bereidt hij met passie de meest populaire Belgische frituurklassiekers.">
+    <meta name="keywords" content="frituur chef, Belgische gerechten, ervaring, frieten, snacks, burgers, frituur klassiekers">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="chef.html">
+    <meta property="og:title" content="Onze Chef - Frituur Magic">
+    <meta property="og:description" content="Ontmoet de chef van Frituur Magic. Met jarenlange ervaring bereidt hij met passie de meest populaire Belgische frituurklassiekers.">
+    <meta property="og:image" content="menufiles/chef.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="chef.html">
+    <meta property="twitter:title" content="Onze Chef - Frituur Magic">
+    <meta property="twitter:description" content="Ontmoet de chef van Frituur Magic. Met jarenlange ervaring bereidt hij met passie de meest populaire Belgische frituurklassiekers.">
+    <meta property="twitter:image" content="menufiles/chef.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Preload crucial style sheets -->
+    <link rel="preload" href="indexfiles/style-v2.css" as="style">
+    <link rel="preload" href="indexfiles/style-chef.css" as="style">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="indexfiles/style-v2.css">
+    <link rel="stylesheet" href="indexfiles/style-chef.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Anton&family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text" aria-label="Frituur Magic">
+                    FRITUUR <span>Magic</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="menu.html" class="btn-commander-header">
+                    BESTELLEN
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu zijbalk -->
+    <div class="menu-sidebar" id="menuSidebar">
+        <div class="menu-sidebar-overlay" id="menuOverlay"></div>
+        <div class="menu-sidebar-content">
+            <button class="menu-close" id="menuClose">×</button>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-link">HOME</a>
+                <a href="menu.html" class="sidebar-link">MENU</a>
+                <a href="chef.html" class="sidebar-link">CHEF</a>
+                <a href="contact.html" class="sidebar-link">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Chef main section -->
+    <div class="chef-page-wrapper">
+        <section class="chef-hero">
+            <div class="chef-container">
+                
+                <!-- Left: Chef Image Area -->
+                <div class="chef-image-area">
+                    <!-- Glowing decorative circle background -->
+                    <div class="chef-glow-backdrop"></div>
+                    
+                    <!-- Chef portrait container -->
+                    <div class="chef-image-container">
+                        <img src="menufiles/chef.png" alt="Onze Chef" class="chef-portrait" loading="lazy">
+                        
+                        <!-- Floating sticker badge -->
+                        <div class="chef-badge-floating">
+                            <span class="chef-badge-icon">🍟</span>
+                            <span class="chef-badge-text">100% Belgisch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Chef Copy Area -->
+                <div class="chef-info-area">
+                    <p class="chef-subtitle-cursive">Onze Keukenmeester</p>
+                    <h1 class="chef-title-mega">DE CHEF</h1>
+                    <span class="chef-experience-pill">Jarenlange Ervaring</span>
+                    
+                    <!-- Chef text card -->
+                    <div class="chef-desc-card">
+                        <p class="chef-desc-text">
+                            Maak kennis met onze chef, de drijvende kracht achter de heerlijke smaken van Frituur Magic. Met zijn <strong>jarenlange ervaring</strong> en grote passie voor het vak, bereidt hij dagelijks de meest <strong>populaire Belgische klassiekers</strong> voor u.
+                            <br><br>
+                            Van onze krokante, goudgele frieten en legendarische snacks tot sappige burgers en krokant gebakken kipboutjes: onze chef zorgt ervoor dat elk gerecht warm, krokant en vol smaak geserveerd wordt. Pure traditie en vakmanschap die u proeft bij elke hap!
+                        </p>
+                    </div>
+
+                    <div class="chef-btn-container">
+                        <a href="menu.html" class="btn-chef-menu">BEKIJK HET MENU</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Geanimeerde golven -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="wave-parallax">
+                    <use href="#wave" x="48" y="0" fill="rgba(251, 209, 13, 0.3)" />
+                    <use href="#wave" x="48" y="3" fill="rgba(251, 209, 13, 0.5)" />
+                    <use href="#wave" x="48" y="5" fill="rgba(251, 209, 13, 0.7)" />
+                    <use href="#wave" x="48" y="7" fill="#FBD10D" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Logo -->
+                    <div class="footer-column footer-logo-col">
+                        <div class="footer-brand">FRITUUR <span>Magic</span></div>
+                    </div>
+
+                    <!-- Pagina's -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">PAGINA'S</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#accueil">Home</a></li>
+                            <li><a href="menu.html">Ons Menu</a></li>
+                            <li><a href="chef.html">Onze Chef</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Openingstijden -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">OPENINGSTIJDEN</h3>
+                        <ul class="footer-links">
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Di - Zo: 11:30 - 23:00</li>
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Maandag: 16:30 - 22:30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Floating Checkout Button -->
+    <a href="menu.html" class="floating-checkout" id="floatingCheckout" aria-label="Open bestelopties">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkout-icon">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="checkout-text">Bestellen</span>
+    </a>
+
+    <!-- Script -->
+    <script src="indexfiles/script.js" defer></script>
+</body>
+</html>

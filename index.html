@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frituur Magic - Kip, snacks, burgers en frieten</title>
+    <meta name="description" content="Frituur Magic: lekkere frieten, krokante kip, snacks, burgers en meer. Bestel online of kom langs voor echte frituurklassiekers.">
+    <meta name="keywords" content="frituur, frieten, kip, snacks, burgers, frituursnacks, afhalen, bezorgen">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/">
+    <meta property="og:title" content="Frituur Magic - Kip, snacks, burgers en frieten">
+    <meta property="og:description" content="Lekkere frieten, krokante kip, snacks, burgers en meer. Bestel online of kom langs.">
+    <meta property="og:image" content="indexfiles/ban.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/">
+    <meta property="twitter:title" content="Frituur Magic">
+    <meta property="twitter:description" content="Lekkere frieten, krokante kip, snacks, burgers en meer.">
+    <meta property="twitter:image" content="indexfiles/ban.jpg">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- Belangrijke assets vooraf laden -->
+    <link rel="preload" href="indexfiles/frituur-kip.jpg" as="image">
+    <link rel="preload" href="indexfiles/style-v2.css" as="style">
+
+    <link rel="stylesheet" href="indexfiles/style-v2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Anton&family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text" aria-label="Frituur Magic">
+                    FRITUUR <span>Magic</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="menu.html" class="btn-commander-header">
+                    BESTELLEN
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu zijbalk -->
+    <div class="menu-sidebar" id="menuSidebar">
+        <div class="menu-sidebar-overlay" id="menuOverlay"></div>
+        <div class="menu-sidebar-content">
+            <button class="menu-close" id="menuClose">×</button>
+
+            <nav class="sidebar-nav">
+                <a href="#accueil" class="sidebar-link">HOME</a>
+                <a href="menu.html" class="sidebar-link">MENU</a>
+                <a href="chef.html" class="sidebar-link">CHEF</a>
+                <a href="contact.html" class="sidebar-link">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero sectie -->
+    <section class="hero" id="accueil">
+        <!-- Achtergrondafbeelding -->
+        <div class="hero-bg">
+            <img src="indexfiles/frituur-kip.jpg" alt="Frituur Magic" class="hero-bg-img" loading="lazy">
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Content erboven -->
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-subtitle-cursive">Lekker snel, warm en krokant</p>
+                <h1 class="hero-title-mega">
+                    FRITUUR<br>Magic
+                </h1>
+                <p class="hero-description">
+                    De plek voor krokante kip, lekkere snacks,<br>
+                    sappige burgers en goudgele frieten.<br>
+                    Alles warm, vers en met die echte frituur-smaak.
+                </p>
+                <a href="menu.html" class="btn-commander-hero">
+                    ONLINE BESTELLEN
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Franchise sectie -->
+    <section class="franchise-section" id="franchise">
+        <!-- Decoratieve panda links -->
+        <img src="indexfiles/panda.png" alt="Frituur Magic" class="floating-sticker sticker-panda-franchise" loading="lazy">
+
+        <div class="franchise-content">
+            <p class="franchise-subtitle-cursive">Welkom</p>
+            <h2 class="franchise-title-mega">FRITUUR<br>MAGIC</h2>
+            <p class="franchise-description">
+                Een gezellige frituur voor iedereen die houdt van goed eten:<br>
+                krokante kip, warme frieten, lekkere snacks en burgers<br>
+                die altijd goed smaken.
+            </p>
+
+            <div class="franchise-stats">
+                <div class="stat-item">
+                    <span class="stat-number">KIP</span>
+                    <span class="stat-label">Krokant gebakken</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">FRIET</span>
+                    <span class="stat-label">Goudgeel en warm</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">SNACKS</span>
+                    <span class="stat-label">Voor elke goesting</span>
+                </div>
+            </div>
+
+            <a href="menu.html" class="btn-franchise">BEKIJK HET MENU</a>
+        </div>
+
+    </section>
+
+    <!-- Menu sectie -->
+    <section class="menu-section" id="menu">
+        <div class="menu-container">
+            <div class="menu-left">
+                <h2 class="menu-title">Ons Menu</h2>
+                <p class="menu-description">
+                    Ontdek onze frieten, kip, burgers en snacks,<br>
+                    snel klaar en altijd lekker warm.<br>
+                    Perfect voor afhalen, bestellen of gewoon goed eten.
+                </p>
+                <a href="menu.html" class="btn-voir-menu">BEKIJK DE MENUKAART</a>
+            </div>
+            <div class="menu-right">
+                <img src="indexfiles/ban.jpg" alt="Menu van Frituur Magic" class="menu-img" loading="lazy">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Restaurants sectie -->
+    <section class="restaurants-section" id="restaurants">
+        <div class="container">
+            <!-- Panda in de rijst rechts -->
+            <img src="indexfiles/panda dans le rit.png" alt="Frituur Magic" class="panda-restaurants-right" loading="lazy">
+
+            <div class="restaurants-header">
+                <p class="restaurants-subtitle-cursive">Kom langs</p>
+                <h2 class="restaurants-title-mega">JOUW<br>MAGIC</h2>
+                <p class="restaurants-description">
+                    Zin in frieten, kip, snacks of een burger?<br>
+                    Bij Frituur Magic vind je alles voor een snelle,<br>
+                    lekkere maaltijd met echte frituur-vibes.
+                </p>
+            </div>
+
+            <a href="contact.html" class="btn-voir-plus-restos">
+                KOM LANGS
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Geanimeerde golven -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="wave-parallax">
+                    <use href="#wave" x="48" y="0" fill="rgba(251, 209, 13, 0.3)" />
+                    <use href="#wave" x="48" y="3" fill="rgba(251, 209, 13, 0.5)" />
+                    <use href="#wave" x="48" y="5" fill="rgba(251, 209, 13, 0.7)" />
+                    <use href="#wave" x="48" y="7" fill="#FBD10D" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Logo -->
+                    <div class="footer-column footer-logo-col">
+                        <div class="footer-brand">FRITUUR <span>Magic</span></div>
+                    </div>
+
+                    <!-- Pagina's -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">PAGINA'S</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#accueil">Home</a></li>
+                            <li><a href="menu.html">Ons Menu</a></li>
+                            <li><a href="chef.html">Onze Chef</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Openingstijden -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">OPENINGSTIJDEN</h3>
+                        <ul class="footer-links">
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Di - Zo: 11:30 - 23:00</li>
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Maandag: 16:30 - 22:30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <!-- Floating Checkout Button -->
+    <a href="menu.html" class="floating-checkout" id="floatingCheckout" aria-label="Open bestelopties">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkout-icon">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="checkout-text">Bestellen</span>
+    </a>
+
+    <script src="indexfiles/script.js" defer></script>
+</body>
+</html>

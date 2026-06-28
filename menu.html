@@ -1,0 +1,1975 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Frituur Magic - Kip, snacks, burgers en frieten</title>
+    <meta name="description" content="Ontdek het menu van Frituur Magic: frieten, krokante kip, snacks, burgers en desserts. Bestel online of kom langs.">
+    <meta name="keywords" content="frituur menu, frieten, kip, snacks, burgers, tenders, desserts, afhalen, bezorgen">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="menu.html">
+    <meta property="og:title" content="Menu Frituur Magic - Onze menukaart">
+    <meta property="og:description" content="Frieten, krokante kip, snacks, burgers en desserts. Ontdek het menu van Frituur Magic.">
+    <meta property="og:image" content="menufiles/krokante-kip.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="menu.html">
+    <meta property="twitter:title" content="Menu Frituur Magic">
+    <meta property="twitter:description" content="Frieten, krokante kip, snacks, burgers en desserts.">
+    <meta property="twitter:image" content="menufiles/krokante-kip.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="menufiles/style-menu.css">
+    <link rel="stylesheet" href="menufiles/style-cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Anton&family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text" aria-label="Frituur Magic">
+                    FRITUUR <span>Magic</span>
+                </a>
+            </div>
+
+            <div class="nav-right">
+                <a href="menu.html" class="btn-commander-header">
+                    BESTELLEN
+                </a>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu zijbalk -->
+    <div class="menu-sidebar" id="menuSidebar">
+        <div class="menu-sidebar-overlay" id="menuOverlay"></div>
+        <div class="menu-sidebar-content">
+            <button class="menu-close" id="menuClose">×</button>
+
+            <nav class="sidebar-nav">
+                <a href="index.html" class="sidebar-link">HOME</a>
+                <a href="menu.html" class="sidebar-link">MENU</a>
+                <a href="chef.html" class="sidebar-link">CHEF</a>
+                <a href="contact.html" class="sidebar-link">CONTACT</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Menu header -->
+    <section class="menu-header">
+        <div class="menu-header-content">
+            <h1 class="menu-title-main">DE MENUKAART</h1>
+            <p class="menu-description-main">
+                Ontdek onze lekkere frituurklassiekers,<br>
+                van krokante kip en warme frieten tot snacks, burgers en desserts.<br>
+                Perfect voor snelle goesting, afhalen of gewoon lekker eten.
+            </p>
+        </div>
+
+    </section>
+    <!-- Menu tabs & Search -->
+    <section class="menu-tabs-section">
+        <div class="search-container">
+            <div class="search-box">
+                <svg class="search-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="menuSearchInput" placeholder="Zoek in het menu (bijv. friet, speciaal, look...)" autocomplete="off">
+                <button id="clearSearchBtn" aria-label="Wissen" style="display: none;">&times;</button>
+            </div>
+        </div>
+
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-category="kip-friet">KIP & FRIET</button>
+            <button class="tab-btn" data-category="snacks">SNACKS</button>
+            <button class="tab-btn" data-category="burgers">BURGERS</button>
+            <button class="tab-btn" data-category="broodjes">BROODJES</button>
+            <button class="tab-btn" data-category="vis">VIS</button>
+            <button class="tab-btn" data-category="bereidingen">BEREIDINGEN</button>
+            <button class="tab-btn" data-category="dranken">DRANKEN</button>
+            <button class="tab-btn" data-category="sauzen">SAUZEN</button>
+        </div>
+    </section>
+    <!-- Menu items -->
+    <section class="menu-items-section">
+        <div class="menu-items-container">
+            <!-- Geen resultaten melding -->
+            <div class="no-results-message" id="noResultsMessage" style="display: none;">
+                <div class="no-results-content">
+                    <div class="no-results-icon">🔍</div>
+                    <h3>Geen resultaten gevonden</h3>
+                    <p>We konden geen gerechten vinden die voldoen aan uw zoekopdracht.</p>
+                </div>
+            </div>
+
+            <!-- KIP & FRIET categorie -->
+            <div class="menu-category active" id="kip-friet">
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/friet.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Verse Frieten</h3>
+                            <p class="product-description">Goudgele, knapperige Belgische frieten, vers en warm gebakken.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,50 - € 7,20</span>
+                                <button class="btn-prijs-bestel choose-fries-btn">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/kipboutjes.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Krokante Kipboutjes</h3>
+                            <p class="product-description">Malse en krokant gebakken kipboutjes, heerlijk gekruid.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 5,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Krokante Kipboutjes" data-price="5.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/nuggers.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kipnuggets</h3>
+                            <p class="product-description">Krokante kipnuggets gemaakt van 100% zachte kipfilet.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kipnuggets" data-price="4.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fingers.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kipfingers</h3>
+                            <p class="product-description">Lekkere, krokante kipfingers, perfect voor de snelle hap.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kipfingers" data-price="4.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SNACKS categorie -->
+            <div class="menu-category" id="snacks">
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/bamischijf.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bamischijf</h3>
+                            <p class="product-description">Krokante snack gevuld met heerlijk gekruide bami.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bamischijf" data-price="2.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bitterballen</h3>
+                            <p class="product-description">Klassieke, krokante bitterballen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bitterballen" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Boulet</h3>
+                            <p class="product-description">Traditionele gehaktbal, warm geserveerd.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Boulet" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Boulet speciaal</h3>
+                            <p class="product-description">Gehaktbal met speciaalsaus en uitjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Boulet speciaal" data-price="3.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fingers.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Chickenfingers</h3>
+                            <p class="product-description">Krokante kipvingers.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Chickenfingers" data-price="3.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Garnaalkroket</h3>
+                            <p class="product-description">Huisgemaakte kroket gevuld met grijze garnalen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,40</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Garnaalkroket" data-price="2.40">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Vleeskroket</h3>
+                            <p class="product-description">Klassieke vleeskroket met een romige vulling.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,10</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Vleeskroket" data-price="2.10">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Goulashkroket</h3>
+                            <p class="product-description">Kroket gevuld met smaakvolle goulash.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Goulashkroket" data-price="2.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/nuggers.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kippets</h3>
+                            <p class="product-description">Heerlijke, malse kipnuggets.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kippets" data-price="3.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/lompia.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Loempia</h3>
+                            <p class="product-description">Grote loempia rijkelijk gevuld.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Loempia" data-price="3.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kaaskroket</h3>
+                            <p class="product-description">Kroket met een heerlijk vloeiende kaasvulling.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kaaskroket" data-price="2.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/mexicano.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mexicano</h3>
+                            <p class="product-description">Stevig gekruide, pittige snack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,90</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mexicano" data-price="2.90">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cervela</h3>
+                            <p class="product-description">Klassieke cervela worst.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Cervela" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Cervela Speciaal</h3>
+                            <p class="product-description">Cervela worst met verse uitjes en speciaalsaus.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,90</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Cervela Speciaal" data-price="3.90">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ribster</h3>
+                            <p class="product-description">Lekkere snack met sparerib-smaak.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Ribster" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fingers.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fishfingers</h3>
+                            <p class="product-description">Krokante visvingers.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,10</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Fishfingers" data-price="3.10">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ragouzi</h3>
+                            <p class="product-description">Krokante snack met een romige ragoutvulling.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Ragouzi" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Saté</h3>
+                            <p class="product-description">Klassieke vleesspiesen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Saté" data-price="3.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kipsaté</h3>
+                            <p class="product-description">Spies van malse stukjes kip.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kipsaté" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/kipboutjes.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kippenboutjes</h3>
+                            <p class="product-description">Heerlijk gekruide kippenboutjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,70</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kippenboutjes" data-price="3.70">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Shoarmarol</h3>
+                            <p class="product-description">Snack gevuld met gekruid shoarmavlees.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Shoarmarol" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Taco</h3>
+                            <p class="product-description">Pittige Mexicaanse snack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Taco" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Berepoot</h3>
+                            <p class="product-description">Gehaktbal met schijfjes ui op een stokje.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Berepoot" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Vidéekroket</h3>
+                            <p class="product-description">Kroket gevuld met romige videe (vol-au-vent).</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,10</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Vidéekroket" data-price="2.10">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Crizly</h3>
+                            <p class="product-description">Extra pittige en krokante snack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Crizly" data-price="3.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Curryworst</h3>
+                            <p class="product-description">De klassieke frikandel.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Curryworst" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Curryworst speciaal</h3>
+                            <p class="product-description">Frikandel speciaal met mayonaise, curry en uitjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,90</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Curryworst speciaal" data-price="2.90">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/kipcorn.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kipcorn</h3>
+                            <p class="product-description">Krokante kipsnack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kipcorn" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Spablo</h3>
+                            <p class="product-description">Smaakvolle snack gevuld met spaghetti bolognese.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Spablo" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/lompia.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mini loempia</h3>
+                            <p class="product-description">Kleine vegetarische loempia's.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mini loempia" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Viandel</h3>
+                            <p class="product-description">Klassieke viandel snack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Viandel" data-price="2.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Viandel Speciaal</h3>
+                            <p class="product-description">Viandel speciaal met uitjes en saus.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,40</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Viandel Speciaal" data-price="3.40">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Megamix</h3>
+                            <p class="product-description">Mix van verschillende minisnacks.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Megamix" data-price="4.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mammoet</h3>
+                            <p class="product-description">Lange, stevige gehaktworst.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mammoet" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mammoet speciaal</h3>
+                            <p class="product-description">Mammoet worst met speciaalsaus en uitjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mammoet speciaal" data-price="3.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kipknots</h3>
+                            <p class="product-description">Kipsnack op een stokje met een krokant jasje.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kipknots" data-price="2.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mora macho</h3>
+                            <p class="product-description">Grote, stevig gekruide snack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mora macho" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Zigeunerstick</h3>
+                            <p class="product-description">Kruidige vleessnack op een stokje.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Zigeunerstick" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mora pikanto</h3>
+                            <p class="product-description">Pittige gehaktrol.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mora pikanto" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kaassouflé</h3>
+                            <p class="product-description">Bladerdeegsnack met gesmolten kaasvulling.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kaassouflé" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gigantico</h3>
+                            <p class="product-description">Extra grote vleessnack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,10</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Gigantico" data-price="2.10">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gigantico speciaal</h3>
+                            <p class="product-description">Gigantico met speciaalsaus en uitjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Gigantico speciaal" data-price="2.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- New snacks from Photo 3 -->
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/lekkerbekfilet.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lekkerbekfilet</h3>
+                            <p class="product-description">Heerlijke, krokante visfilet.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Lekkerbekfilet" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/hottwister.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Hot twister</h3>
+                            <p class="product-description">Kruidige, krokante kipsnack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Hot twister" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/kipkaaspunt.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kipkaaspunt</h3>
+                            <p class="product-description">Kroket met een vulling van kip en gesmolten kaas.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kipkaaspunt" data-price="3.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/bonita.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bonita</h3>
+                            <p class="product-description">Heerlijke gekruide snack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bonita" data-price="2.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Kraker</h3>
+                            <p class="product-description">Krokante, gekruide vleessnack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,10</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Kraker" data-price="2.10">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/picknicker.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Picknicker</h3>
+                            <p class="product-description">Kruidige kipsnack.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Picknicker" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/sitostick.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Sitostick</h3>
+                            <p class="product-description">Stukjes vlees en ui omwisselt op een stokje.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Sitostick" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/vuurvreter.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Vuurvreter</h3>
+                            <p class="product-description">Extra pittige kipsnack op een stokje.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Vuurvreter" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BURGERS categorie -->
+            <div class="menu-category" id="burgers">
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/bickyburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bicky Burger</h3>
+                            <p class="product-description">De legendarische Bicky burger met heerlijke sauzen en krokante uitjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,70</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bicky Burger" data-price="3.70">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/bickycheesburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bicky Cheese</h3>
+                            <p class="product-description">De klassieke Bicky burger afgetopt met een plakje smeltende kaas.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bicky Cheese" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/ribburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Rib Burger</h3>
+                            <p class="product-description">Smaakvolle ribburger met lekkere kruiden en BBQ-saus.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Rib Burger" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/burger1.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bicky Crispy</h3>
+                            <p class="product-description">Krokant gebakken kipburger met de speciale Bicky sauzen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bicky Crispy" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/chiekenburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Chickenburger</h3>
+                            <p class="product-description">Malse, sappige kipburger met knapperige sla en romige saus.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Chickenburger" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/bickyfrickburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Bicky Frik</h3>
+                            <p class="product-description">Bicky burger met een opengesneden krokante frikandel.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Bicky Frik" data-price="3.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/burger1.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Veggieburger</h3>
+                            <p class="product-description">Heerlijke vegetarische burger met sla, tomaat en dressing.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Veggieburger" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/hawaiburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Hawaï Burger</h3>
+                            <p class="product-description">Burger met een tropische touch: sappig rundvlees en een schijf ananas.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Hawaï Burger" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fishburger.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fishburger</h3>
+                            <p class="product-description">Krokant gepaneerde visburger met tartaarsaus en frisse sla.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Fishburger" data-price="4.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BROODJES categorie -->
+            <div class="menu-category" id="broodjes">
+                <!-- Weekend disclaimer -->
+                <div class="category-disclaimer" style="text-align: center; margin-bottom: 30px; font-style: italic; color: var(--primary-rose); font-size: 16px;">
+                    * In het weekend maken wij geen broodjes (tussen 17:00 en 20:00).
+                </div>
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&auto=format&fit=crop')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Kaas</h3>
+                            <p class="product-description">Heerlijk krokant broodje belegd met jonge kaas en garnituur.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,90</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Kaas" data-price="2.90">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1539252554453-80ab65ce3586?w=500&auto=format&fit=crop')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Hesp</h3>
+                            <p class="product-description">Klassiek broodje belegd met malse gekookte ham (hesp) en groentjes.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,90</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Hesp" data-price="2.90">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1554433607-66b5eed9d504?w=500&auto=format&fit=crop')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Kaas & Hesp</h3>
+                            <p class="product-description">Krokant broodje rijkelijk belegd met ham, kaas en salade.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,70</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Kaas & Hesp" data-price="3.70">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&auto=format&fit=crop')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Smos Natuur</h3>
+                            <p class="product-description">Klassieke smos met mayonaise, gekookt ei en frisse salade.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Smos Natuur" data-price="3.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/mexicano.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Mexicano XL</h3>
+                            <p class="product-description">Warm broodje belegd met een grote, pittig gekruide Mexicano.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 5,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Mexicano XL" data-price="5.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Mammoetworst</h3>
+                            <p class="product-description">Broodje belegd met de extra lange en smaakvolle Mammoetworst.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Mammoetworst" data-price="4.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/snaks.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Boulet</h3>
+                            <p class="product-description">Broodje belegd met schijfjes van onze lekkere, gekruide boulet.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Boulet" data-price="4.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/burger1.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Broodje Hamburger</h3>
+                            <p class="product-description">Heerlijk broodje belegd met een warm gegrilde hamburger en groenten.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Broodje Hamburger" data-price="4.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1509722747041-616f39b57569?w=500&auto=format&fit=crop')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Brood (enkel brood)</h3>
+                            <p class="product-description">Een los, vers afgebakken broodje/baguette.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Brood (enkel brood)" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIS categorie -->
+            <div class="menu-category" id="vis">
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/calamarsis.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Calamarisringen</h3>
+                            <p class="product-description">Gepaneerde en krokant gefrituurde calamarisringen met een schijfje citroen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 5,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Calamarisringen" data-price="5.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fingers.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fishfingers</h3>
+                            <p class="product-description">Goudgele visvingers, krokant van buiten en zacht van binnen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,10</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Fishfingers" data-price="3.10">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/lekkerbekfilet.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lekkerbekfilet</h3>
+                            <p class="product-description">Heerlijke, goudbruin gefrituurde lekkerbekvisfilet.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,80</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Lekkerbekfilet" data-price="2.80">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRANKEN categorie -->
+            <div class="menu-category" id="dranken">
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/cola.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Coca-Cola</h3>
+                            <p class="product-description">Klassiek, verfrissend blikje Coca-Cola (33cl), ijskoud.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Coca-Cola" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/colalight.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Coca-Cola Light</h3>
+                            <p class="product-description">Verfrissend blikje Coca-Cola Light (33cl), suikervrij.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Coca-Cola Light" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/colazero.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Coca-Cola Zero</h3>
+                            <p class="product-description">Verfrissend blikje Coca-Cola Zero (33cl), met zero suikers.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Coca-Cola Zero" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/sprite.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Sprite</h3>
+                            <p class="product-description">Lekker fris blikje Sprite met citroen- en limoensmaak.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Sprite" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fanta.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fanta Orange</h3>
+                            <p class="product-description">Heerlijk fruitig blikje Fanta Orange (33cl), ijskoud.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Fanta Orange" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fantacassis.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fanta Cassis</h3>
+                            <p class="product-description">Frisdrank met de heerlijke smaak van zwarte bessen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Fanta Cassis" data-price="2.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/fantared.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Fanta Red No Sugar</h3>
+                            <p class="product-description">Frisdrank met een heerlijke rode vruchtensmaak.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Fanta Red No Sugar" data-price="2.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/spawater.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Spa Reine</h3>
+                            <p class="product-description">Puur en verfrissend niet-bruisend mineraalwater.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Spa Reine" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/spabruis.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Spa Bruis</h3>
+                            <p class="product-description">Heerlijk verfrissend, intens bruisend mineraalwater.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Spa Bruis" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/juplir.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Jupiler</h3>
+                            <p class="product-description">Heerlijk verfrissend Belgisch pilsbier (33cl).</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,30</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Jupiler" data-price="2.30">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/icetea.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ice-Tea</h3>
+                            <p class="product-description">Heerlijk verfrissende Lipton Ice Tea Sparkling (33cl).</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Ice-Tea" data-price="2.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/icetea.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ice-Tea Peach</h3>
+                            <p class="product-description">Verfrissende Ice Tea met een fruitige perziksmaak.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Ice-Tea Peach" data-price="2.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/icetea.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Ice-Tea Green</h3>
+                            <p class="product-description">Verfrissende, niet-bruisende ijsthee met extracten van groene thee.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Ice-Tea Green" data-price="2.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/redbull.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Red Bull</h3>
+                            <p class="product-description">Energiedrank blikje (25cl), ijskoud geserveerd.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,60</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Red Bull" data-price="2.60">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/aadrink.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">AA Drink High Energy</h3>
+                            <p class="product-description">Verfrissende en energierijke sportdrank.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="AA Drink High Energy" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/gini.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Gini</h3>
+                            <p class="product-description">De bitterzoete frisse frisdrank met citroenextracten.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Gini" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BEREIDINGEN categorie -->
+            <div class="menu-category" id="bereidingen">
+                <div class="menu-grid">
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/stoofvleessaus.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Stoofvleessaus</h3>
+                            <p class="product-description">Heerlijke, ambachtelijke saus op basis van ons befaamde stoofvlees recept.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 2,00</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Stoofvleessaus" data-price="2.00">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/stoofvlees.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Stoofvlees</h3>
+                            <p class="product-description">Huisgemaakt, mals stoofvlees langzaam gegaard in Belgisch bier.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Stoofvlees" data-price="4.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/goulash.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Goulash</h3>
+                            <p class="product-description">Huisgemaakte, rijkelijk gevulde en mild pittige Hongaarse goulash.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Goulash" data-price="4.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/vol-au-vent.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Vol-au-vent</h3>
+                            <p class="product-description">Klassieke koninginnenhapje met malse kip, gehaktballetjes en romige saus.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 4,20</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Vol-au-vent" data-price="4.20">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image" style="background-image: url('menufiles/mosselen.png')">
+                            <div class="product-overlay"></div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Mosselen</h3>
+                            <p class="product-description">Portie heerlijk gegaarde Zeeuwse mosselen.</p>
+                            <div class="product-price-bestel-row">
+                                <span class="product-card-price">€ 3,50</span>
+                                <button class="btn-prijs-bestel add-to-cart-btn" data-name="Mosselen" data-price="3.50">Bestellen</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cart Info Card -->
+                    <div class="product-card info-card">
+                        <div class="product-info">
+                            <span class="badge popular">AFHALEN</span>
+                            <h3 class="product-name">Klaar om te bestellen?</h3>
+                            <p class="product-description">Voeg uw favoriete gerechten hierboven toe. Open vervolgens de winkelwagen om uw bestelling te bevestigen!</p>
+                            <button class="btn-prijs-bestel open-cart-trigger">Open Winkelwagen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAUZEN categorie -->
+            <div class="menu-category" id="sauzen">
+                <div class="sauces-grid">
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Toscaansesaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Toscaansesaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Mosterd</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Mosterd" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Vlammensaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Vlammensaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Andalouse</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Andalouse" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Mammoet</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Mammoet" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Americain</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Americain" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Bickysaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Bickysaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Cocktail</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Cocktail" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Curry</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Curry" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Samurai</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Samurai" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Tomagrec</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Tomagrec" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Zoete mayonaise</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Zoete mayonaise" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Barbecuesaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Barbecuesaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Tomataisesaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Tomataisesaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Zigeunersaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Zigeunersaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Pepersaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Pepersaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Zelfgemaakte tartaar</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Zelfgemaakte tartaar" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Joppiesaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Joppiesaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Mayonaise</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Mayonaise" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Tomaten/Curry ketchup</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Tomaten/Curry ketchup" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Speciaal saus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Speciaal saus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Pindasaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Pindasaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Satesaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Satesaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Looksaus</h4>
+                            <span class="sauce-price">€ 0,90</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Looksaus" data-price="0.90">+</button>
+                    </div>
+                    <div class="sauce-card">
+                        <div class="sauce-icon"><img src="menufiles/saus.png" alt="Saus" class="sauce-img"></div>
+                        <div class="sauce-info">
+                            <h4 class="sauce-name">Warme curry</h4>
+                            <span class="sauce-price">€ 2,00</span>
+                        </div>
+                        <button class="sauce-add-btn add-to-cart-btn" data-name="Warme curry" data-price="2.00">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Prijsnotitie -->
+        <div class="price-note">
+            <p>* Betaling vindt plaats in de winkel bij afhaling.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <!-- Geanimeerde golven -->
+        <div class="wave-container">
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+                <defs>
+                    <path id="wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="wave-parallax">
+                    <use href="#wave" x="48" y="0" fill="rgba(251, 209, 13, 0.3)" />
+                    <use href="#wave" x="48" y="3" fill="rgba(251, 209, 13, 0.5)" />
+                    <use href="#wave" x="48" y="5" fill="rgba(251, 209, 13, 0.7)" />
+                    <use href="#wave" x="48" y="7" fill="#FBD10D" />
+                </g>
+            </svg>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+                <div class="footer-content">
+                    <!-- Logo -->
+                    <div class="footer-column footer-logo-col">
+                        <div class="footer-brand">FRITUUR <span>Magic</span></div>
+                    </div>
+
+                    <!-- Pagina's -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">PAGINA'S</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html#accueil">Home</a></li>
+                            <li><a href="menu.html">Ons Menu</a></li>
+                            <li><a href="chef.html">Onze Chef</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Openingstijden -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">OPENINGSTIJDEN</h3>
+                        <ul class="footer-links">
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Di - Zo: 11:30 - 23:00</li>
+                            <li style="color: var(--black); font-size: 18px; font-weight: 500;">Maandag: 16:30 - 22:30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Floating Checkout Button -->
+    <a href="#" class="floating-checkout" id="floatingCheckout" aria-label="Winkelwagen openen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="checkout-icon">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="checkout-text">Winkelwagen (<span id="cart-floating-count">0</span>)</span>
+    </a>
+
+    <!-- Cart Sidebar Drawer -->
+    <div class="cart-sidebar-overlay" id="cartOverlay"></div>
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-title-container">
+            <h2 class="cart-title">Winkelwagen</h2>
+            <button class="cart-close-btn" id="cartClose" aria-label="Sluit winkelwagen">×</button>
+        </div>
+        <div class="cart-items-list" id="cartItemsList">
+            <!-- Dynamically populated or empty message -->
+            <div class="cart-empty-message">Uw winkelwagen is leeg.</div>
+        </div>
+        <div class="cart-footer-area">
+            <div class="cart-total-row">
+                <span class="cart-total-label">Totaal</span>
+                <span class="cart-total-value" id="cartTotal">€ 0,00</span>
+            </div>
+            <button class="cart-confirm-btn" id="cartConfirmBtn" disabled>Bestelling Bevestigen</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+        <div class="checkout-modal-overlay" id="checkoutModalOverlay"></div>
+        <div class="checkout-modal-content">
+            <button class="checkout-modal-close" id="checkoutClose" aria-label="Sluiten">×</button>
+            <h2 class="checkout-title">Gegevens invullen</h2>
+            
+            <div class="checkout-disclaimer-box">
+                <div class="disclaimer-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 4px;">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    Belangrijke Informatie
+                </div>
+                <p class="disclaimer-text">
+                    Let op: bestellingen zijn uitsluitend voor <strong>afhalen</strong>. Wij bezorgen niet aan huis.<br><br>
+                    <strong style="color: #FBD10D; font-size: 16px; display: block; margin-bottom: 10px; border: 1px solid rgba(251, 209, 13, 0.4); padding: 8px 12px; background: rgba(251, 209, 13, 0.05); border-radius: 8px; text-transform: uppercase; font-family: 'Anton', sans-serif; letter-spacing: 0.5px;">
+                        ⚠️ Enkel CASH of PAYCONIQ betaling in de winkel!
+                    </strong>
+                    <strong>Afhaallocatie:</strong><br>
+                    <a href="https://maps.google.com/?q=Frans+van+Dunlaan,+2610+Antwerpen" target="_blank" rel="noopener noreferrer" class="disclaimer-address">
+                        Frans van Dunlaan, 2610 Antwerpen (Wilrijk)
+                    </a>
+                </p>
+            </div>
+
+            <form class="checkout-form" id="checkoutForm" autocomplete="on">
+                <div class="checkout-form-group">
+                    <label for="customerName" class="checkout-label">Naam</label>
+                    <input type="text" id="customerName" class="checkout-input" placeholder="Uw volledige naam" required autocomplete="name">
+                </div>
+                <div class="checkout-form-group">
+                    <label for="customerGsm" class="checkout-label">GSM-Nummer</label>
+                    <input type="tel" id="customerGsm" class="checkout-input" placeholder="Bvb. 0466 46 47 65" required autocomplete="tel">
+                </div>
+                <div class="checkout-form-group">
+                    <label for="pickupTime" class="checkout-label">Wanneer komt u afhalen?</label>
+                    <input type="time" id="pickupTime" class="checkout-input" required>
+                </div>
+                <button type="submit" class="checkout-submit-btn">Bestelling Bevestigen</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-overlay" id="successModalOverlay"></div>
+        <div class="success-modal-content">
+            <div class="success-icon-wrapper">✓</div>
+            <h2 class="success-title">Bestelling geplaatst!</h2>
+            <p class="success-text">
+                Bedankt voor uw bestelling! We gaan direct aan de slag om uw gerechten klaar te maken.<br>
+                U kunt uw bestelling afhalen en betalen bij onze vestiging in Wilrijk.
+            </p>
+            <div class="success-order-code" id="successOrderCode">Bestelcode: #---</div>
+            <button class="success-btn" id="successCloseBtn">Terug naar Menu</button>
+        </div>
+    </div>
+
+    <!-- Fries Size Picker Modal -->
+    <div class="checkout-modal" id="friesSizeModal">
+        <div class="checkout-modal-overlay" id="friesSizeModalOverlay"></div>
+        <div class="checkout-modal-content" style="max-width: 420px; padding: 30px;">
+            <button class="checkout-modal-close" id="friesSizeClose" aria-label="Sluiten">×</button>
+            <h3 class="checkout-title" style="font-size: 24px; margin-bottom: 20px;">Kies uw portie friet</h3>
+            
+            <div class="fries-options-list">
+                <button class="fries-size-row-btn" data-size="Mini" data-price="2.50">
+                    <span class="fries-size-name">Mini</span>
+                    <span class="fries-size-pr">€ 2,50</span>
+                </button>
+                <button class="fries-size-row-btn" data-size="Klein" data-price="2.90">
+                    <span class="fries-size-name">Klein</span>
+                    <span class="fries-size-pr">€ 2,90</span>
+                </button>
+                <button class="fries-size-row-btn" data-size="Medium" data-price="3.30">
+                    <span class="fries-size-name">Medium</span>
+                    <span class="fries-size-pr">€ 3,30</span>
+                </button>
+                <button class="fries-size-row-btn" data-size="Groot" data-price="3.70">
+                    <span class="fries-size-name">Groot</span>
+                    <span class="fries-size-pr">€ 3,70</span>
+                </button>
+                <button class="fries-size-row-btn" data-size="Super" data-price="5.20">
+                    <span class="fries-size-name">Super</span>
+                    <span class="fries-size-pr">€ 5,20</span>
+                </button>
+                <button class="fries-size-row-btn" data-size="Familie pak" data-price="7.20">
+                    <span class="fries-size-name">Familie pak</span>
+                    <span class="fries-size-pr">€ 7,20</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase compatibility SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+
+    <!-- App scripts -->
+    <script src="menufiles/script-menu.js"></script>
+    <script src="menufiles/menu-cart.js" defer></script>
+</body>
+</html>
