@@ -1,0 +1,407 @@
+/* ========================================
+   CHEF PAGE STYLES - Frituur Magic
+   ======================================== */
+
+.chef-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-dark);
+}
+
+/* Chef Hero Section */
+.chef-hero {
+    position: relative;
+    min-height: calc(100vh - 120px);
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px 100px 40px;
+    overflow: hidden;
+}
+
+/* Background gradient details to add depth */
+.chef-hero::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(251, 209, 13, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.chef-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(214, 169, 0, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.chef-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Left Column: Image wrapper & Glow decoration */
+.chef-image-area {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Golden glowing disc background that centers behind the transparent chef */
+.chef-glow-backdrop {
+    position: absolute;
+    width: min(450px, 90vw);
+    height: min(450px, 90vw);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-rose) 0%, var(--dark-rose) 100%);
+    box-shadow: 0 0 80px rgba(251, 209, 13, 0.35);
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+}
+
+.chef-glow-backdrop::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 100%);
+    transform: rotate(30deg);
+    animation: glowShine 8s linear infinite;
+}
+
+@keyframes glowShine {
+    0% { transform: translate(-100%, -100%) rotate(30deg); }
+    100% { transform: translate(100%, 100%) rotate(30deg); }
+}
+
+.chef-image-container {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    animation: chefFloat 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes chefFloat {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+}
+
+.chef-portrait {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    z-index: 6;
+    /* Soft shadow on the chef itself to pop against the glowing disc */
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.5));
+    transition: transform 0.4s var(--transition-smooth);
+}
+
+.chef-image-container:hover .chef-portrait {
+    transform: scale(1.05);
+}
+
+/* Decorative badges near the image */
+.chef-badge-floating {
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+    background: var(--surface-soft);
+    border: 2px solid var(--primary-rose);
+    border-radius: 12px;
+    padding: 12px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transform: rotate(5deg);
+    animation: floatBounce 6s ease-in-out infinite alternate;
+}
+
+.chef-badge-icon {
+    font-size: 24px;
+}
+
+.chef-badge-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Right Column: Text content */
+.chef-info-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--white);
+}
+
+.chef-subtitle-cursive {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(36px, 5vw, 52px);
+    color: var(--primary-rose);
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    animation: chefFadeIn 1s ease-out;
+}
+
+.chef-title-mega {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(55px, 8vw, 95px);
+    line-height: 0.95;
+    color: var(--white);
+    letter-spacing: normal;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+    animation: chefFadeIn 1.2s ease-out;
+}
+
+.chef-experience-pill {
+    background: rgba(251, 209, 13, 0.1);
+    border: 1px solid rgba(251, 209, 13, 0.3);
+    color: var(--primary-rose);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(251, 209, 13, 0.05);
+}
+
+.chef-desc-card {
+    background: rgba(24, 24, 24, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.chef-desc-text {
+    font-size: clamp(16px, 1.8vw, 18px);
+    line-height: 1.8;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+.chef-desc-text strong {
+    color: var(--primary-rose);
+    font-weight: 600;
+}
+
+.chef-btn-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+/* Make header logo yellow on the chef page */
+.navbar .logo-text,
+.navbar .logo-text span {
+    color: var(--primary-rose) !important;
+}
+
+/* Button styling mimicking btn-commander-hero but not triggering JS modal click */
+.btn-chef-menu {
+    display: inline-block;
+    transform: skewX(-10deg);
+    background: var(--surface-elevated);
+    color: var(--primary-rose);
+    padding: 18px 50px;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: scaleIn 0.8s ease-out 0.9s backwards;
+    z-index: 2;
+}
+
+.btn-chef-menu::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--black);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.btn-chef-menu:hover::before {
+    width: 400%;
+    height: 400%;
+}
+
+.btn-chef-menu:hover {
+    color: var(--white) !important;
+    transform: skewX(-10deg) translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 45px rgba(251, 209, 13, 0.5);
+}
+
+/* Animations */
+@keyframes chefFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .chef-hero {
+        padding: 40px 30px 80px 30px;
+    }
+
+    .chef-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+
+    .chef-image-area {
+        order: 1; /* Image first on mobile/tablet to catch eye */
+    }
+
+    .chef-info-area {
+        order: 2;
+        align-items: center;
+    }
+
+    .chef-btn-container {
+        justify-content: center;
+    }
+
+    .chef-glow-backdrop {
+        width: 380px;
+        height: 380px;
+    }
+
+    .chef-image-container {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .chef-hero {
+        margin-top: 80px;
+        min-height: auto;
+        padding: 30px 20px 60px 20px;
+    }
+
+    .chef-container {
+        gap: 40px;
+    }
+
+    .chef-glow-backdrop {
+        width: 290px;
+        height: 290px;
+    }
+
+    .chef-image-container {
+        max-width: 300px;
+    }
+
+    .chef-badge-floating {
+        bottom: 10px;
+        right: -10px;
+        padding: 8px 14px;
+        border-radius: 8px;
+    }
+
+    .chef-badge-icon {
+        font-size: 18px;
+    }
+
+    .chef-badge-text {
+        font-size: 11px;
+    }
+
+    .chef-desc-card {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .chef-experience-pill {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chef-glow-backdrop {
+        width: 240px;
+        height: 240px;
+    }
+
+    .chef-image-container {
+        max-width: 250px;
+    }
+
+    .chef-desc-card {
+        padding: 20px;
+    }
+    
+    .chef-btn-container .btn-commander-hero {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+    }
+}

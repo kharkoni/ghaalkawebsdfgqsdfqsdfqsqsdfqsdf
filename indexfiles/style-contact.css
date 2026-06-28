@@ -1,0 +1,494 @@
+/* ========================================
+   CONTACT PAGE STYLES - Frituur Magic
+   ======================================== */
+
+.contact-page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--surface-dark);
+}
+
+/* Yellow Header Logo override on contact page */
+.navbar .logo-text,
+.navbar .logo-text span {
+    color: var(--primary-rose) !important;
+}
+
+/* Contact Main Section */
+.contact-section {
+    position: relative;
+    min-height: calc(100vh - 120px);
+    margin-top: 100px;
+    padding: 60px 40px 100px 40px;
+    overflow: hidden;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: contactFadeIn 0.8s ease-out;
+}
+
+.contact-subtitle-cursive {
+    font-family: 'Pacifico', cursive;
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--primary-rose);
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.contact-title-mega {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(50px, 7vw, 85px);
+    line-height: 1;
+    color: var(--white);
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+    animation: contactFadeIn 1s ease-out 0.2s backwards;
+}
+
+/* Left Column: Details, Hours & Reviews */
+.contact-details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.contact-info-card {
+    background: rgba(24, 24, 24, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.contact-card-title {
+    font-family: 'Anton', sans-serif;
+    font-size: 24px;
+    color: var(--primary-rose);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(251, 209, 13, 0.2);
+    padding-bottom: 10px;
+}
+
+.info-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info-icon-box {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    background: rgba(251, 209, 13, 0.1);
+    border: 1px solid rgba(251, 209, 13, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: var(--primary-rose);
+}
+
+.info-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.info-value:hover {
+    color: var(--primary-rose);
+}
+
+/* Opening Hours Table */
+.hours-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.hours-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+}
+
+.hours-row.today {
+    background: rgba(251, 209, 13, 0.12);
+    border: 1px solid rgba(251, 209, 13, 0.4);
+    box-shadow: 0 0 15px rgba(251, 209, 13, 0.1);
+}
+
+.hours-row.today .day-name,
+.hours-row.today .day-time {
+    color: var(--primary-rose);
+    font-weight: 700;
+}
+
+.day-name {
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.day-time {
+    font-size: 15px;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+/* Google Review Card */
+.google-review-card {
+    background: rgba(25, 25, 25, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.google-review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(251, 209, 13, 0.15);
+    border-color: rgba(251, 209, 13, 0.3);
+}
+
+.google-badge-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.google-icon-svg {
+    width: 48px;
+    height: 48px;
+}
+
+.google-logo-text {
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: 0.5px;
+}
+
+.google-logo-text span:nth-child(1) { color: #4285F4; }
+.google-logo-text span:nth-child(2) { color: #EA4335; }
+.google-logo-text span:nth-child(3) { color: #FBBC05; }
+.google-logo-text span:nth-child(4) { color: #4285F4; }
+.google-logo-text span:nth-child(5) { color: #34A853; }
+.google-logo-text span:nth-child(6) { color: #EA4335; }
+
+.google-rating-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.google-stars-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.google-rating-num {
+    font-size: 32px;
+    font-family: 'Anton', sans-serif;
+    color: var(--white);
+    line-height: 1;
+}
+
+.google-stars {
+    display: flex;
+    color: var(--primary-rose);
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(251, 209, 13, 0.5);
+}
+
+.google-reviews-count {
+    font-size: 13px;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+.google-reviews-count strong {
+    color: var(--white);
+}
+
+/* Right Column: Google Maps & Contact Form */
+.contact-interactive-col {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.map-container {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(251, 209, 13, 0.2);
+    position: relative;
+    z-index: 5;
+    transition: border-color 0.3s ease;
+}
+
+.map-container:hover {
+    border-color: var(--primary-rose);
+}
+
+.map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    /* Soft grayscale blending map with the dark UI */
+    filter: grayscale(0.4) invert(0.9) contrast(1.2) brightness(0.9);
+    transition: filter 0.5s ease;
+}
+
+.map-container:hover .map-iframe {
+    filter: grayscale(0) invert(0) contrast(1) brightness(1);
+}
+
+/* Contact Form Card */
+.contact-form-card {
+    background: rgba(24, 24, 24, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.form-input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 14px 18px;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-rose);
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px rgba(251, 209, 13, 0.15);
+}
+
+textarea.form-input {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit-form {
+    align-self: flex-start;
+    display: inline-block;
+    transform: skewX(-10deg);
+    background: var(--primary-rose);
+    color: var(--black);
+    padding: 16px 45px;
+    font-weight: 900;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 20px rgba(251, 209, 13, 0.25);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-submit-form::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--black);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.btn-submit-form:hover::before {
+    width: 400%;
+    height: 400%;
+}
+
+.btn-submit-form:hover {
+    color: var(--white) !important;
+    transform: skewX(-10deg) translateY(-3px) scale(1.03);
+    box-shadow: 0 12px 35px rgba(251, 209, 13, 0.45);
+}
+
+/* Animations */
+@keyframes contactFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .map-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        margin-top: 80px;
+        padding: 30px 20px 60px 20px;
+    }
+    
+    .contact-header {
+        margin-bottom: 35px;
+    }
+
+    .contact-info-card,
+    .contact-form-card {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .btn-submit-form {
+        width: 100%;
+        text-align: center;
+        padding: 16px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-row {
+        gap: 12px;
+    }
+
+    .info-icon-box {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 18px;
+    }
+
+    .info-value {
+        font-size: 15px;
+    }
+
+    .google-review-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+}
